@@ -8,6 +8,8 @@ The models with the best cross validation scores are not always chosen first. In
 
 "I love hill climbing because it can take lots of models and picks the best small subset of models. (i.e. its like Lasso regression) And it computes ensemble model weights." - Chris Deotte (Kaggle legend)
 
+hillclimbers was used to achieve 4th place in Kaggle's Season 3, Episode 14 Playground Series competition - Prediction of Wild Blueberry Yield. I created a [discussion post](https://www.kaggle.com/competitions/playground-series-s3e14/discussion/410639) that provides a detailed explanation of the solution and also shared the [notebook](https://www.kaggle.com/code/mattop/4th-place-hillclimbing-with-5-models-ps-s3-e14) that was used as the final submission which showcases hillclimbers.
+
 ```python
 !pip install hillclimbers
 
