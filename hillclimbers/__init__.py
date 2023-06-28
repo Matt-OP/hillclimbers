@@ -26,7 +26,7 @@ def climb_hill(
     negative_weights: bool = False, 
     precision: float = 0.01, 
     plot_hill: bool = True, 
-    plot_hist: bool = False
+    plot_hist: bool = False,
     return_oof_preds: bool = False
 ) -> np.ndarray: # Returns test predictions (and oof predictions if return_oof_preds = True) resulting from hill climbing
     
