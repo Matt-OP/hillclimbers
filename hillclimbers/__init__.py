@@ -27,7 +27,8 @@ def climb_hill(
     precision: float = 0.01, 
     plot_hill: bool = True, 
     plot_hist: bool = False
-) -> np.ndarray: # Returns test predictions resulting from hill climbing
+    return_oof_preds: bool = False
+) -> np.ndarray: # Returns test predictions (and oof predictions if return_oof_preds = True) resulting from hill climbing
     
     BOLD_TXT =   Style.BRIGHT
     YELLOW_TXT = BOLD_TXT + Fore.YELLOW
@@ -162,5 +163,6 @@ def climb_hill(
         fig.update_layout(autosize = False, width = 900, height = 500, xaxis_title = target) 
         fig.update_traces(hovertemplate = "test_pred: %{x}<br>count: %{y}")
         fig.show()
-                
-    return current_best_test_preds.values
+    
+    if return_oof_preds: return current_best_test_preds.values, current_best_ensemble.values            
+    else: return current_best_test_preds.values
